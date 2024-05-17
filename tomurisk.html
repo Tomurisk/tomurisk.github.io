@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomurisk</title>
+    <!-- Import Inter font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #9DBE4B;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .split-button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .split-button-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            center: 200%; /* 5px to the right of the center */
+            width: 350px; /* Width of the background */
+            height: 200%;
+            background-color: #892738;
+            z-index: -1; /* Ensure it's behind the buttons */
+        }
+
+        .split-button {
+            display: flex;
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .split-button button,
+        .split-button a {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            color: white;
+            cursor: pointer; /* Set cursor to pointer */
+            font-size: 16px;
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            transition: background 0.3s;
+            text-decoration: none; /* Remove default underline */
+        }
+
+        .split-button button:first-child,
+        .split-button a:first-child {
+            border-right: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .split-button button:hover,
+        .split-button a:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-button,
+        .rolimons-button,
+        .spotify-button,
+        .github-button,
+        .youtube-button {
+            width: calc(100% - 40px); /* Adjusted width to match button width */
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Added margin-bottom for spacing */
+            cursor: pointer; /* Set cursor to pointer */
+            font-family: 'Inter', sans-serif; /* Use Inter font */
+            text-decoration: none; /* Remove default underline */
+        }
+
+
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+
+        .rolimons-button {
+            background: linear-gradient(45deg, #004E8E, #002D4C); /* Gradient background */
+        }
+
+        .rolimons-button:hover {
+            background: linear-gradient(45deg, #003B6F, #001F33); /* Corrected gradient background on hover */
+        }
+
+        .spotify-button {
+            background-color: #1db954; /* Spotify Green */
+        }
+
+        .spotify-button:hover {
+            background-color: #16914D; /* Darker green on hover */
+        }
+
+        .github-button {
+            background-color: #333; /* Black */
+        }
+
+        .github-button:hover {
+            background-color: #222; /* Darker black on hover */
+        }
+
+        .youtube-button {
+            background-color: #CC0000; /* Red */
+        }
+
+        .youtube-button:hover {
+            background-color: #9B0000; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="split-button-container">
+        <div class="split-button">
+            <a href="https://www.instagram.com/tomurisk/" target="_blank">Instagram profile</a>
+            <a href="https://www.instagram.com/direct/t/112774553454807" target="_blank">Direct message</a>
+        </div>
+        <a class="rolimons-button" href="https://www.rolimons.com/player/99167168" target="_blank">Rolimons profile</a>
+        <a class="spotify-button" href="https://open.spotify.com/playlist/5O4rirmBFHKvGMFaBm5ncq" target="_blank">Spotify playlist</a>
+        <a class="github-button" href="https://github.com/Tomurisk" target="_blank">GitHub profile</a>
+        <a class="youtube-button" href="https://www.youtube.com/channel/UCfUgNUkptt9JeQzd2TEtfbg" target="_blank">YouTube</a>
+    </div>
+</body>
+</html>
