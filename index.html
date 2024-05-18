@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <style>
         body {
-            font-family: 'Inter', sans-serif; /* Use Inter font */
+            font-family: 'Inter', sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #9DBE4B;
-            overflow: hidden; /* Prevent scrolling */
+            min-height: 95vh;
+            background-color: #3EBE4B; /* Initial background color */
+            color: #000000;
+            animation: hueChange 10s infinite alternate; /* Apply animation for hue change */
+        }
+
+        @keyframes hueChange {
+            0% {
+                background-color: #9DBE4B; /* Start color */
+            }
+            100% {
+                background-color: #3EBE4B; /* End color */
+            }
         }
 
         .split-button-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .split-button-container::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            center: 200%; /* 5px to the right of the center */
-            width: 350px; /* Width of the background */
-            height: 200%;
-            background-color: #892738;
-            z-index: -1; /* Ensure it's behind the buttons */
         }
 
         .split-button {
@@ -126,7 +126,9 @@
     </style>
 </head>
 <body>
+    <img id="morda" src="morda.jpg" alt="Tomurisk" style="width: 300px; height: 300px; cursor: pointer;">
     <div class="split-button-container">
+        <h1>tomurisk.</h1>
         <div class="split-button">
             <a href="https://www.instagram.com/tomurisk/" target="_blank">Instagram profile</a>
             <a href="https://www.instagram.com/direct/t/112774553454807" target="_blank">Direct message</a>
@@ -136,5 +138,19 @@
         <a class="github-button" href="https://github.com/Tomurisk" target="_blank">GitHub profile</a>
         <a class="youtube-button" href="https://www.youtube.com/channel/UCfUgNUkptt9JeQzd2TEtfbg" target="_blank">YouTube</a>
     </div>
+
+    <script>
+        var morda = document.getElementById('morda');
+        var isNegative = false;
+
+        morda.addEventListener('click', function() {
+            if (isNegative) {
+                morda.style.filter = 'none';
+            } else {
+                morda.style.filter = 'invert(100%)';
+            }
+            isNegative = !isNegative;
+        });
+    </script>
 </body>
 </html>
